@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>FILA ATM</title>
+  
+  
+</head>
+<body>
+  <header>
+    <h1>FILA ATM</h1>
+  </header>
+  
+  <main>
+    <form id="markForm">
+      <label for="nameInput">Seu Nome:</label>
+      <input type="text" id="nameInput" required>
+      
+      <label for="operationInput">Tipo de Operação:</label>
+      <!-- Alteração: Usando um elemento select com opções predefinidas -->
+      <select id="operationInput" required>
+        <option value="Levantamento">Levantamento</option>
+        <option value="Levantamento Sem Cartão">Levantamento Sem Cartão</option>
+        <option value="Consultar_Saldo">Consultar Saldo</option>
+        <option value="Transferência">Transferência</option>
+        <option value="Pagar Rupe">Pagar RUPE</option>
+        <option value="Outros Movimentos">Outros Movimentos</option>
+
+
+        <!-- Adicione outras opções conforme necessário -->
+      </select>
+
+      <label for="reservationType">Reservar:</label>
+      <select id="reservationType" required>
+        <option value="now">Agora</option>
+        <option value="schedule">Agendar</option>
+      </select>
+
+      <label for="timeInput">Hora de Reserva:</label>
+      <input type="time" id="timeInput" required>
+
+      <button type="button" id="markButton">Marcar Presença!</button>
+    </form>
+
+    <p>Sua posição na fila: <span id="userPosition">0</span></p>
+    <p id="queueCount">Pessoas na Fila: 0</p>
+
+
+    <ul id="virtualQueue">
+      <!-- As posições na fila serão adicionadas dinamicamente aqui -->
+    </ul>
+  </main>
+    <footer>
+    <p class="copyright">CoDev © 2023</p>
+    </footer>
+  <script src="app.js"></script>
+</body>
+</html>
