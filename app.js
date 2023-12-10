@@ -1,6 +1,7 @@
-const signUpButton = document.getElementById('Vamos');
-const signInButton = document.getElementById('Procurar');
+const botaoVamos = document.getElementById('vamos');
+const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
+const voltarButton = document.getElementById('voltar');
 
 signUpButton.addEventListener('click', () => {
 	container.classList.add("right-panel-active");

@@ -7,7 +7,6 @@
 
 body {
 	background: #f6f5f7;
-    background: url('/img/filas_nos_atm_.jpg') center center/cover fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -61,7 +60,6 @@ button  {
 .form-container.sign-up-container button#voltar {
     margin-top: 10px;
 }
-
 
 button:active {
 	transform: scale(0.95);
@@ -125,19 +123,29 @@ select {
 }
 
 .sign-in-container {
-
-	
-	left: 0;
-	width: 50%;
-	z-index: 2;
+    left: 0;
+    width: 50%;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.sign-in-container img {
+    max-width: 100%;
+    max-height: 50%;
+    width: auto;
+    height: auto;
+}
+
 
 .container.right-panel-active .sign-in-container {
 	transform: translateX(100%);
 }
 
 .sign-up-container {
-	
 	left: 0;
 	width: 50%;
 	opacity: 0;
@@ -145,13 +153,10 @@ select {
 }
 
 .container.right-panel-active .sign-up-container {
-	
 	transform: translateX(100%);
 	opacity: 1;
 	z-index: 5;
 	animation: show 0.6s;
-
-    
 }
 
 @keyframes show {
@@ -208,7 +213,7 @@ select {
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 40px;
-	text-align: center;
+	text-align:justify;
 	top: 0;
 	height: 100%;
 	width: 50%;
@@ -218,25 +223,24 @@ select {
 
 .overlay-left {
 	transform: translateX(-20%);
-	
 }
 
 .container.right-panel-active .overlay-left {
 	transform: translateX(0);
-	
 }
 
 .overlay-right {
 	right: 0;
 	transform: translateX(0);
-	
 }
 
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
 
-
+.social-container {
+	margin: 20px 0;
+}
 
 
 
